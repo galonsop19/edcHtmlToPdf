@@ -1,0 +1,30 @@
+2025-01-24 18:39:27 Cantidad de HTML a procesar: 1
+2025-01-24 18:39:27 Cantidad por hilo: 0
+2025-01-24 18:39:27 Cantidad ultimo hilo: 1
+2025-01-24 18:39:27 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:39:27 Hilo #10 Creando archivo pdf de 34387654.html
+2025-01-24 18:41:17 Cantidad de HTML a procesar: 1
+2025-01-24 18:41:17 Cantidad por hilo: 0
+2025-01-24 18:41:17 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:41:17 Cantidad ultimo hilo: 1
+2025-01-24 18:41:17 Hilo #10 Creando archivo pdf de 34387654.html
+2025-01-24 18:48:09 Cantidad de HTML a procesar: 1
+2025-01-24 18:48:09 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:48:09 Cantidad ultimo hilo: 1
+2025-01-24 18:48:09 Cantidad por hilo: 0
+2025-01-24 18:48:09 Hilo #10 Creando archivo pdf de 34387654.html
+2025-01-24 18:50:49 Cantidad de HTML a procesar: 1
+2025-01-24 18:50:49 Cantidad por hilo: 0
+2025-01-24 18:50:49 Cantidad ultimo hilo: 1
+2025-01-24 18:50:49 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:50:49 Hilo #10 Creando archivo pdf de 34387654.html
+2025-01-24 18:53:52 Cantidad por hilo: 0
+2025-01-24 18:53:52 Cantidad de HTML a procesar: 1
+2025-01-24 18:53:52 Cantidad ultimo hilo: 1
+2025-01-24 18:53:52 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:53:52 Hilo #10 Creando archivo pdf de 34387654.html
+2025-01-24 18:54:39 Cantidad ultimo hilo: 1
+2025-01-24 18:54:39 Cantidad de HTML a procesar: 1
+2025-01-24 18:54:39 Cantidad por hilo: 0
+2025-01-24 18:54:39 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-01-24 18:54:39 Hilo #10 Creando archivo pdf de 34387654.html

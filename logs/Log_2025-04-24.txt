@@ -1,0 +1,89 @@
+2025-04-24 11:16:40 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:16:40 Cantidad de HTML a procesar: 13
+2025-04-24 11:16:40 Cantidad por hilo: 1
+2025-04-24 11:16:40 Cantidad ultimo hilo: 4
+2025-04-24 11:16:40 Hilo #1 Creando archivo pdf de 20346733.html
+2025-04-24 11:16:40 Hilo #8 Creando archivo pdf de 46193384.html
+2025-04-24 11:16:40 Hilo #6 Creando archivo pdf de 38324952.html
+2025-04-24 11:16:40 Hilo #5 Creando archivo pdf de 33778235.html
+2025-04-24 11:16:40 Hilo #7 Creando archivo pdf de 45263730.html
+2025-04-24 11:16:40 Hilo #3 Creando archivo pdf de 31227074.html
+2025-04-24 11:16:40 Hilo #9 Creando archivo pdf de 52387249.html
+2025-04-24 11:16:40 Hilo #4 Creando archivo pdf de 31987239.html
+2025-04-24 11:16:40 Hilo #2 Creando archivo pdf de 22687319.html
+2025-04-24 11:16:40 Hilo #10 Creando archivo pdf de 55296957.html
+2025-04-24 11:16:45 Hilo #10 Creando archivo pdf de 65698251.html
+2025-04-24 11:16:49 Hilo #10 Creando archivo pdf de 71742696.html
+2025-04-24 11:16:54 Hilo #10 Creando archivo pdf de 71977469.html
+2025-04-24 11:27:49 Cantidad por hilo: 1
+2025-04-24 11:27:49 Cantidad ultimo hilo: 4
+2025-04-24 11:27:49 Cantidad de HTML a procesar: 13
+2025-04-24 11:27:49 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:27:49 Hilo #9 Creando archivo pdf de 52387249.html
+2025-04-24 11:27:49 Hilo #1 Creando archivo pdf de 20346733.html
+2025-04-24 11:27:49 Hilo #8 Creando archivo pdf de 46193384.html
+2025-04-24 11:27:49 Hilo #7 Creando archivo pdf de 45263730.html
+2025-04-24 11:27:49 Hilo #6 Creando archivo pdf de 38324952.html
+2025-04-24 11:27:49 Hilo #5 Creando archivo pdf de 33778235.html
+2025-04-24 11:27:49 Hilo #10 Creando archivo pdf de 55296957.html
+2025-04-24 11:27:49 Hilo #3 Creando archivo pdf de 31227074.html
+2025-04-24 11:27:49 Hilo #2 Creando archivo pdf de 22687319.html
+2025-04-24 11:27:49 Hilo #4 Creando archivo pdf de 31987239.html
+2025-04-24 11:27:54 Hilo #10 Creando archivo pdf de 65698251.html
+2025-04-24 11:27:57 Hilo #10 Creando archivo pdf de 71742696.html
+2025-04-24 11:28:04 Hilo #10 Creando archivo pdf de 71977469.html
+2025-04-24 11:31:06 Cantidad ultimo hilo: 4
+2025-04-24 11:31:06 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:31:06 Cantidad de HTML a procesar: 13
+2025-04-24 11:31:06 Cantidad por hilo: 1
+2025-04-24 11:32:01 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:32:01 Cantidad por hilo: 1
+2025-04-24 11:32:01 Cantidad ultimo hilo: 4
+2025-04-24 11:32:01 Cantidad de HTML a procesar: 13
+2025-04-24 11:32:01 Hilo #3 Creando archivo pdf de 31227074.html
+2025-04-24 11:32:01 Hilo #2 Creando archivo pdf de 22687319.html
+2025-04-24 11:32:01 Hilo #7 Creando archivo pdf de 45263730.html
+2025-04-24 11:32:01 Hilo #6 Creando archivo pdf de 38324952.html
+2025-04-24 11:32:01 Hilo #4 Creando archivo pdf de 31987239.html
+2025-04-24 11:32:01 Hilo #1 Creando archivo pdf de 20346733.html
+2025-04-24 11:32:01 Hilo #5 Creando archivo pdf de 33778235.html
+2025-04-24 11:32:01 Hilo #9 Creando archivo pdf de 52387249.html
+2025-04-24 11:32:01 Hilo #8 Creando archivo pdf de 46193384.html
+2025-04-24 11:32:01 Hilo #10 Creando archivo pdf de 55296957.html
+2025-04-24 11:32:05 Hilo #10 Creando archivo pdf de 65698251.html
+2025-04-24 11:32:06 Hilo #10 Creando archivo pdf de 71742696.html
+2025-04-24 11:32:06 Hilo #10 Creando archivo pdf de 71977469.html
+2025-04-24 11:32:35 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:32:35 Cantidad ultimo hilo: 4
+2025-04-24 11:32:35 Cantidad por hilo: 1
+2025-04-24 11:32:35 Cantidad de HTML a procesar: 13
+2025-04-24 11:32:35 Hilo #3 Creando archivo pdf de 31227074.html
+2025-04-24 11:32:35 Hilo #2 Creando archivo pdf de 22687319.html
+2025-04-24 11:32:35 Hilo #1 Creando archivo pdf de 20346733.html
+2025-04-24 11:32:35 Hilo #5 Creando archivo pdf de 33778235.html
+2025-04-24 11:32:35 Hilo #4 Creando archivo pdf de 31987239.html
+2025-04-24 11:32:35 Hilo #8 Creando archivo pdf de 46193384.html
+2025-04-24 11:32:35 Hilo #7 Creando archivo pdf de 45263730.html
+2025-04-24 11:32:35 Hilo #9 Creando archivo pdf de 52387249.html
+2025-04-24 11:32:35 Hilo #6 Creando archivo pdf de 38324952.html
+2025-04-24 11:32:35 Hilo #10 Creando archivo pdf de 55296957.html
+2025-04-24 11:32:38 Hilo #10 Creando archivo pdf de 65698251.html
+2025-04-24 11:32:39 Hilo #10 Creando archivo pdf de 71742696.html
+2025-04-24 11:32:39 Hilo #10 Creando archivo pdf de 71977469.html
+2025-04-24 11:33:02 Cantidad por hilo: 1
+2025-04-24 11:33:02 Cantidad de HTML a procesar: 13
+2025-04-24 11:33:02 Cantidad ultimo hilo: 4
+2025-04-24 11:33:02 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-04-24 11:33:02 Hilo #5 Creando archivo pdf de 33778235.html
+2025-04-24 11:33:02 Hilo #10 Creando archivo pdf de 55296957.html
+2025-04-24 11:33:02 Hilo #3 Creando archivo pdf de 31227074.html
+2025-04-24 11:33:02 Hilo #1 Creando archivo pdf de 20346733.html
+2025-04-24 11:33:02 Hilo #6 Creando archivo pdf de 38324952.html
+2025-04-24 11:33:02 Hilo #4 Creando archivo pdf de 31987239.html
+2025-04-24 11:33:02 Hilo #8 Creando archivo pdf de 46193384.html
+2025-04-24 11:33:02 Hilo #2 Creando archivo pdf de 22687319.html
+2025-04-24 11:33:02 Hilo #9 Creando archivo pdf de 52387249.html
+2025-04-24 11:33:02 Hilo #7 Creando archivo pdf de 45263730.html
+2025-04-24 11:33:06 Hilo #10 Creando archivo pdf de 65698251.html
+2025-04-24 11:33:10 Hilo #10 Creando archivo pdf de 71742696.html
+2025-04-24 11:33:15 Hilo #10 Creando archivo pdf de 71977469.html

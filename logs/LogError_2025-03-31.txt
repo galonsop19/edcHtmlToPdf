@@ -1,0 +1,12 @@
+2025-03-31 18:15:05 Ocurrió un error en 26030546.pdf: C:\Users\galonso\Desktop\EDC\26030546.html
+2025-03-31 18:15:05 Ocurrió un error en 26231468.pdf: C:\Users\galonso\Desktop\EDC\26231468.html
+2025-03-31 18:15:05 Ocurrió un error en 26860958.pdf: C:\Users\galonso\Desktop\EDC\26860958.html
+2025-03-31 18:15:05 Ocurrió un error en 26262365.pdf: C:\Users\galonso\Desktop\EDC\26262365.html
+2025-03-31 18:15:05 Ocurrió un error en 27115514.pdf: C:\Users\galonso\Desktop\EDC\27115514.html
+2025-03-31 18:15:05 Ocurrió un error en 27120008.pdf: C:\Users\galonso\Desktop\EDC\27120008.html
+2025-03-31 18:15:05 Ocurrió un error en 27480296.pdf: C:\Users\galonso\Desktop\EDC\27480296.html
+2025-03-31 18:15:05 Ocurrió un error en 27480883.pdf: C:\Users\galonso\Desktop\EDC\27480883.html
+2025-03-31 18:15:05 Ocurrió un error en 27538728.pdf: C:\Users\galonso\Desktop\EDC\27538728.html
+2025-03-31 18:15:05 Ocurrió un error en 27541117.pdf: C:\Users\galonso\Desktop\EDC\27541117.html
+2025-03-31 18:15:05 Ocurrió un error en 27675805.pdf: C:\Users\galonso\Desktop\EDC\27675805.html
+2025-03-31 18:17:58 Ocurrió un error en 13387895.pdf: PDF header not found.

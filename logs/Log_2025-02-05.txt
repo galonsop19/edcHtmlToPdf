@@ -1,0 +1,7 @@
+2025-02-05 18:08:53 Cantidad por hilo: 0
+2025-02-05 18:08:53 Cantidad de HTML a procesar: 3
+2025-02-05 18:08:53 Cantidad ultimo hilo: 3
+2025-02-05 18:08:53 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-02-05 18:08:53 Hilo #10 Creando archivo pdf de 31986342.html
+2025-02-05 18:08:56 Hilo #10 Creando archivo pdf de 34233636.html
+2025-02-05 18:08:58 Hilo #10 Creando archivo pdf de 35820149.html

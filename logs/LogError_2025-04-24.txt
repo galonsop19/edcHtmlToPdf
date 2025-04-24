@@ -1,0 +1,24 @@
+2025-04-24 11:32:05 Ocurrió un error en 33778235.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-33778235.pdf not found as file or resource.
+2025-04-24 11:32:05 Ocurrió un error en 20346733.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-65698251.pdf not found as file or resource.
+2025-04-24 11:32:05 Ocurrió un error en 38324952.pdf: PDF header not found.
+2025-04-24 11:32:05 Ocurrió un error en 22687319.pdf: PDF header not found.
+2025-04-24 11:32:05 Ocurrió un error en 31987239.pdf: PDF header not found.
+2025-04-24 11:32:05 Ocurrió un error en 45263730.pdf: PDF header not found.
+2025-04-24 11:32:05 Ocurrió un error en 52387249.pdf: PDF header not found.
+2025-04-24 11:32:05 Ocurrió un error en 31227074.pdf: PDF header not found.
+2025-04-24 11:32:06 Ocurrió un error en 65698251.pdf: PDF header not found.
+2025-04-24 11:32:06 Ocurrió un error en 46193384.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-46193384.pdf not found as file or resource.
+2025-04-24 11:32:06 Ocurrió un error en 71742696.pdf: Requested page number 8 is out of bounds.
+2025-04-24 11:32:07 Ocurrió un error en 71977469.pdf: Requested page number 8 is out of bounds.
+2025-04-24 11:32:38 Ocurrió un error en 31987239.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-31987239.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 52387249.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-52387249.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 33778235.pdf: java.nio.file.FileSystemException: C:\home\Estados_de_Cuenta\2024\11\30\Update-55296957.pdf: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta
+2025-04-24 11:32:38 Ocurrió un error en 38324952.pdf: java.nio.file.FileSystemException: C:\home\Estados_de_Cuenta\2024\11\30\Update-55296957.pdf: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta
+2025-04-24 11:32:38 Ocurrió un error en 31227074.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-31227074.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 20346733.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-20346733.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 46193384.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-46193384.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 45263730.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-45263730.pdf not found as file or resource.
+2025-04-24 11:32:38 Ocurrió un error en 22687319.pdf: \home\Estados_de_Cuenta/2024/11/30/Update-22687319.pdf not found as file or resource.
+2025-04-24 11:32:39 Ocurrió un error en 65698251.pdf: Requested page number 12 is out of bounds.
+2025-04-24 11:32:39 Ocurrió un error en 71742696.pdf: Requested page number 12 is out of bounds.
+2025-04-24 11:32:40 Ocurrió un error en 71977469.pdf: Requested page number 12 is out of bounds.

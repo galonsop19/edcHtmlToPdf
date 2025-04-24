@@ -1,0 +1,36 @@
+2025-03-28 12:09:29 Ocurrió un error en 15189192.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 25674576.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 10214178.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 55601494.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 48076399.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 27538728.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 38499562.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 20025195.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 62528274.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 12:09:29 Ocurrió un error en 33477101.pdf: Cannot invoke "com.credix.edcHtmlToPdf.mysqlEDC.services.TemplateControlService.getTemplate()" because "this.templateControlService" is null
+2025-03-28 13:15:46 Ocurrió un error en 25674576.pdf: No match found
+2025-03-28 13:15:46 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:15:47 Ocurrió un error en 38499562.pdf: No match found
+2025-03-28 13:15:48 Ocurrió un error en 48076399.pdf: No match found
+2025-03-28 13:15:49 Ocurrió un error en 34231197.pdf: No match found
+2025-03-28 13:15:51 Ocurrió un error en 34243057.pdf: No match found
+2025-03-28 13:15:53 Ocurrió un error en 56681491.pdf: No match found
+2025-03-28 13:20:03 Ocurrió un error en 38499562.pdf: No match found
+2025-03-28 13:20:03 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:20:03 Ocurrió un error en 25674576.pdf: No match found
+2025-03-28 13:31:42 Ocurrió un error en 15189192.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 27538728.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 55601494.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 10214178.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 62528274.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 33477101.pdf: PDF header not found.
+2025-03-28 13:31:42 Ocurrió un error en 48076399.pdf: PDF header not found.
+2025-03-28 13:32:19 Ocurrió un error en 25674576.pdf: No match found
+2025-03-28 13:33:27 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:33:27 Ocurrió un error en 38499562.pdf: No match found
+2025-03-28 13:43:02 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:43:57 Ocurrió un error en 20025195.pdf: No match available
+2025-03-28 13:49:04 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:50:44 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:55:22 Ocurrió un error en 20025195.pdf: No match found
+2025-03-28 13:59:57 Ocurrió un error en 20025195.pdf: No match found

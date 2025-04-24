@@ -1,0 +1,40 @@
+2025-03-11 18:14:29 Cantidad de HTML a procesar: 1
+2025-03-11 18:14:29 Cantidad por hilo: 0
+2025-03-11 18:14:29 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:14:29 Cantidad ultimo hilo: 1
+2025-03-11 18:14:29 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:15:05 Cantidad de HTML a procesar: 1
+2025-03-11 18:15:05 Cantidad ultimo hilo: 1
+2025-03-11 18:15:05 Cantidad por hilo: 0
+2025-03-11 18:15:05 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:15:05 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:19:44 Cantidad por hilo: 0
+2025-03-11 18:19:44 Cantidad de HTML a procesar: 1
+2025-03-11 18:19:44 Cantidad ultimo hilo: 1
+2025-03-11 18:19:44 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:19:44 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:33:31 Cantidad por hilo: 0
+2025-03-11 18:33:31 Cantidad de HTML a procesar: 1
+2025-03-11 18:33:31 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:33:31 Cantidad ultimo hilo: 1
+2025-03-11 18:33:31 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:35:59 Cantidad de HTML a procesar: 1
+2025-03-11 18:35:59 Cantidad ultimo hilo: 1
+2025-03-11 18:35:59 Cantidad por hilo: 0
+2025-03-11 18:35:59 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:35:59 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:45:38 Cantidad de HTML a procesar: 1
+2025-03-11 18:45:38 Cantidad por hilo: 0
+2025-03-11 18:45:38 Cantidad ultimo hilo: 1
+2025-03-11 18:45:38 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:45:38 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:52:15 Cantidad por hilo: 0
+2025-03-11 18:52:15 Cantidad de HTML a procesar: 1
+2025-03-11 18:52:15 Cantidad ultimo hilo: 1
+2025-03-11 18:52:15 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:52:15 Hilo #10 Creando archivo pdf de 8940900.html
+2025-03-11 18:52:38 Cantidad por hilo: 0
+2025-03-11 18:52:38 Cantidad ultimo hilo: 1
+2025-03-11 18:52:38 Cantidad de HTML a procesar: 1
+2025-03-11 18:52:38 Inicia proceso de generacion multihilo de Estados de Cuenta
+2025-03-11 18:52:38 Hilo #10 Creando archivo pdf de 8940900.html
