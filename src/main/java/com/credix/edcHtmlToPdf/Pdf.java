@@ -1915,7 +1915,7 @@ public class Pdf {
 
 			pdf.close();
 
-			System.out.println("Se ha editado el footer con éxito en todas las páginas");
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
