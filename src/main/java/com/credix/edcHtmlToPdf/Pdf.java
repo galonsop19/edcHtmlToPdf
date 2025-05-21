@@ -1407,7 +1407,7 @@ public class Pdf {
 							if (tagContent.contains("<strong>")){
 								if (tagContent.contains(lastLine.trim())){
 									index = getTagIndexStart(tagContent, "div", lastLine);
-									modifyHtml(index,"<br><br><br>");
+									modifyHtml(index,"<br><br><br><br>");
 									return true;
 								}
 							}
