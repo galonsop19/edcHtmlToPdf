@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableJSONDoc
 @EnableAsync
-@PropertySource("file:/home/produccion/conf/app.properties")
+
 
 public class edcHtmlToPdfApplication {
 
