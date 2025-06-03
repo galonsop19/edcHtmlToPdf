@@ -836,7 +836,7 @@ public class Pdf {
 						String[] liness = pageText.split("\\n");
 						String line = liness[liness.length - 2];
 						if (tagContent.contains("<strong>" + line)) {
-							index = getTagIndexStart(extratorModule(tagContent, "section",lastLine) ,"section", "");
+							index = getTagIndexStart(extratorModule(tagContent, "section","") ,"section", "");
 							modifyHtml(index, "<br><br><br><br>");
 							return true;
 
@@ -998,7 +998,7 @@ public class Pdf {
 
 								tagContent = matcher.group(1);
 								if (tagContent.contains("<strong>" + identificador.trim())) {
-									String section = extratorModule(tagContent, "section",lastLine);
+									String section = extratorModule(tagContent, "section","");
 									int indexSection = getTagIndexStart(section, "section", "");
 									newContent = "<br><br><br>";
 									int indx = 4;
@@ -1020,7 +1020,7 @@ public class Pdf {
 
 								}
 								if (tagContent.contains("<strong>" + lines[lines.length - (ind)])) {
-									String section = extratorModule(tagContent, "section",lastLine);
+									String section = extratorModule(tagContent, "section","");
 									int indexSection = getTagIndexStart(section, "section", "");
 									newContent = "<br><br><br>";
 									int indx = 4;
@@ -1093,7 +1093,7 @@ public class Pdf {
 									tagContent = matcher.group(1);
 									tagContent = tagContent.replaceAll("&nbsp;", " ");
 									if (tagContent.contains("<strong>" + line1.trim())) {
-										String section = extratorModule(tagContent, "section",lastLine);
+										String section = extratorModule(tagContent, "section","");
 										int indexSection = getTagIndexStart(section, "section", lastLine);
 										int indexContent = getTagContentIndexWithSection(lines[lines.length - 4], section, "tr");
 										newContent = "<br><br><br>";
@@ -1363,7 +1363,7 @@ public class Pdf {
 									){
 
 
-										index = getTagIndexStart(extratorModule(tagContent, "section",lastLine), "section", "");
+										index = getTagIndexStart(extratorModule(tagContent, "section",""), "section", "");
 										modifyHtml(index,newContent);
 										return true;
 
