@@ -79,6 +79,7 @@ public class Pdf {
 			PdfWriter pdfWriter = new PdfWriter(new File(filename));
 			propertiesPdf(pdfWriter, str);
 			setHtml(str);
+			setName(name);
 			call(destDirectory, name);
 			if (fileExists(destDirectory + "/-" + name)){
 				deleteFile(destDirectory + "/-" + name);
@@ -194,7 +195,7 @@ public class Pdf {
 					newContent+= "<br><b/>";
 				}
 					String tagContent = getTagContentMatch(extratorMatcher("div"),"Aspectos destacados" );
-					String module = extratorModule(tagContent, "section");
+					String module = extratorModule(tagContent, "section","");
 					modifyHtml(getTagIndexStart(module,"section", ""), newContent);
 					updatePdf();
 					return;
@@ -376,7 +377,7 @@ public class Pdf {
 				if (lastLine.contains("comisiones")){
 					newContent+="<br><br>";
 				}
-				modifyHtml(getTagIndexStart(extratorModule(tagContent,"section"), "section", ""),newContent);
+				modifyHtml(getTagIndexStart(extratorModule(tagContent,"section",""), "section", ""),newContent);
 				return true;
 			}
 		}
@@ -500,7 +501,7 @@ public class Pdf {
 							}
 						}
 					}
-					modifyHtml(getTagIndexStart(extratorModule(tagContent,"section"), "section", lastLine),newContent);
+					modifyHtml(getTagIndexStart(extratorModule(tagContent,"section",""), "section", lastLine),newContent);
 				}
 
 
@@ -680,7 +681,7 @@ public class Pdf {
 		String newContentAux="";
 		String br="";
 		int index=0;
-		Matcher matcher= getReversedMatcher(extratorModule(tagContent,"table"), tagContent, "tr");
+		Matcher matcher= getReversedMatcher(extratorModule(tagContent,"table",""), tagContent, "tr");
 		if (matcher==null){
 			return false;
 		}
@@ -835,7 +836,7 @@ public class Pdf {
 						String[] liness = pageText.split("\\n");
 						String line = liness[liness.length - 2];
 						if (tagContent.contains("<strong>" + line)) {
-							index = getTagIndexStart(extratorModule(tagContent, "section") ,"section", "");
+							index = getTagIndexStart(extratorModule(tagContent, "section",lastLine) ,"section", "");
 							modifyHtml(index, "<br><br><br><br>");
 							return true;
 
@@ -997,7 +998,7 @@ public class Pdf {
 
 								tagContent = matcher.group(1);
 								if (tagContent.contains("<strong>" + identificador.trim())) {
-									String section = extratorModule(tagContent, "section");
+									String section = extratorModule(tagContent, "section",lastLine);
 									int indexSection = getTagIndexStart(section, "section", "");
 									newContent = "<br><br><br>";
 									int indx = 4;
@@ -1019,7 +1020,7 @@ public class Pdf {
 
 								}
 								if (tagContent.contains("<strong>" + lines[lines.length - (ind)])) {
-									String section = extratorModule(tagContent, "section");
+									String section = extratorModule(tagContent, "section",lastLine);
 									int indexSection = getTagIndexStart(section, "section", "");
 									newContent = "<br><br><br>";
 									int indx = 4;
@@ -1092,7 +1093,7 @@ public class Pdf {
 									tagContent = matcher.group(1);
 									tagContent = tagContent.replaceAll("&nbsp;", " ");
 									if (tagContent.contains("<strong>" + line1.trim())) {
-										String section = extratorModule(tagContent, "section");
+										String section = extratorModule(tagContent, "section",lastLine);
 										int indexSection = getTagIndexStart(section, "section", lastLine);
 										int indexContent = getTagContentIndexWithSection(lines[lines.length - 4], section, "tr");
 										newContent = "<br><br><br>";
@@ -1120,14 +1121,14 @@ public class Pdf {
 							if ((moneda) != null) {
 								String title = sectionMatchTag(pageText.split("\\n"));
 								if (title != null) {
-									title = getTagContentMatch(extratorMatcher("div"), title);
+									title = getTagContentMatch(extratorMatcher("div"), "<strong>" + title);
 									if (title != null) {
-										String sectionTitle = extratorModule(title, "section");
+										String sectionTitle = extratorModule(title, "section","");
 										String tagName = extratorMatcherWithFilter(sectionTitle, lastLine, "tr");
 										int start = getTagIndexStart(tagName, "tr", lastLine);
 										int end = getTagIndexEnd(tagName, "tr", lastLine);
 
-										newContent = "<br>" +
+										newContent = "<br><br>" +
 												"<tr>" +
 												"<th style=\"text-align: left; max-width: 60px; min-width: 60px; white-space: nowrap\">" +
 												"Fecha <br>" +
@@ -1185,7 +1186,7 @@ public class Pdf {
 								tagContent = matcher.group(1);
 								tagContent = tagContent.replaceAll("&nbsp;", " ");
 								if (tagContent.contains("<strong>" + identificador.trim())) {
-									String section = extratorModule(tagContent, "section");
+									String section = extratorModule(tagContent, "section","");
 									int indexSection = getTagIndexStart(section, "section", "");
 									int indexContent = getTagContentIndexWithSection(lines[lines.length - 3], section, "tr");
 									modifyHtml(indexSection + indexContent, "<br><br><br><br><br>");
@@ -1231,8 +1232,8 @@ public class Pdf {
 									tagContent = matcher.group(1);
 									tagContent = tagContent.replaceAll("&nbsp;", " ");
 									if (tagContent.contains("<strong>" + line1.trim())) {
-										String section = extratorModule(tagContent, "section");
-										int indexSection = getTagIndexStart(section, "section", lastLine);
+										String section = extratorModule(tagContent, "section","");
+										int indexSection = getTagIndexStart(section, "section", "");
 										int indexContent = getTagContentIndexWithSection(lines[lines.length - 4], section, "tr");
 										newContent = "<br><br><br><br><br>";
 										if (desglose) {
@@ -1346,7 +1347,7 @@ public class Pdf {
 
 									{
 
-										index = getTagIndexStart(extratorModule(tagContent, "section"), "section", "");
+										index = getTagIndexStart(extratorModule(tagContent, "section",""), "section", "");
 										modifyHtml(index,"<br><br><br><br><br><br><br>");
 										return true;
 									}
@@ -1362,7 +1363,7 @@ public class Pdf {
 									){
 
 
-										index = getTagIndexStart(extratorModule(tagContent, "section"), "section", "");
+										index = getTagIndexStart(extratorModule(tagContent, "section",lastLine), "section", "");
 										modifyHtml(index,newContent);
 										return true;
 
@@ -1441,7 +1442,7 @@ public class Pdf {
 					return false;
 				}
 				if (lastLine.trim().equals("Abreviaciones")) {
-					String module=(extratorModule("<strong>Abreviaciones</strong>", "section"));
+					String module=(extratorModule("<strong>Abreviaciones</strong>", "section",""));
 					index = getTagIndexStart(module, "section", lastLine);
 					modifyHtml(index, "<br><br><br>");
 					return true;
@@ -1505,13 +1506,13 @@ public class Pdf {
 
 			{
 
-				index = getTagIndexStart(extratorModule(tagContent, module), module, lastLine);
+				index = getTagIndexStart(extratorModule(tagContent, module,""), module, lastLine);
 				modifyHtml(index,"<br><br><br>");
 				return true;
 			}
 			if (lastLine.trim().equals("Aspectos destacados") ||
 					lastLine.trim().equals("Abreviaciones")){
-				index = getTagIndexStart(extratorModule(tagContent, module), module, lastLine);
+				index = getTagIndexStart(extratorModule(tagContent, module,""), module, lastLine);
 				modifyHtml(index,"<br><br><br>");
 				return true;
 
@@ -1535,7 +1536,7 @@ public class Pdf {
 					newContent+="<br><br><br>";
 				}
 
-				index = getTagIndexStart(extratorModule(tagContent, module), module, lastLine);
+				index = getTagIndexStart(extratorModule(tagContent, module,lastLine), module, lastLine);
 				modifyHtml(index,newContent);
 				return true;
 
@@ -1579,8 +1580,8 @@ public class Pdf {
 	}
 	private boolean caseDetallePago(String tagContent) {
 
-		String module = extratorModule(tagContent, "section");
-		String table = extratorModule(tagContent, "table");
+		String module = extratorModule(tagContent, "section","");
+		String table = extratorModule(tagContent, "table","");
 		if (table==null){
 			table=module;
 		}
@@ -1619,7 +1620,7 @@ public class Pdf {
 		return false;
 	}
 	private boolean isLastTr(String tagContent, String tag, String module) {
-		String section= extratorModule(tagContent,"section");
+		String section= extratorModule(tagContent,"section","");
 		String lastTr="";
 		if (section==null){
 			return false;
@@ -1669,14 +1670,20 @@ public class Pdf {
 	}
 	private Matcher getTagIndex(String module, String tag,String lastLine) {
 		int duplicate;
-		if (lastLine!=""){
-			duplicate= duplicate(lastLine);
-			if (duplicate==0){
+		if (isProduct(lastLine)){
+			duplicate=1;
+		}else{
+			if (lastLine!=""){
+				duplicate= duplicate(lastLine);
+				if (duplicate==0){
+					duplicate=1;
+				}
+			}else{
 				duplicate=1;
 			}
-		}else{
-			duplicate=1;
 		}
+
+
 
 		Matcher matcher = extratorMatcher(module);
 		while (matcher.find()) {
@@ -1756,12 +1763,15 @@ public class Pdf {
 		}
 		return count;
 	}
-	private String extratorModule(String tag, String module) {
+	private String extratorModule(String tag, String module, String lastLine) {
 		Matcher matcher=extratorMatcher(module);
+		int numMatch=0;
 		String moduleContent = null;
 		while (matcher.find()) {
 			moduleContent = matcher.group(1);
 			if (moduleContent.toLowerCase().trim().contains(tag.trim().toLowerCase())) {
+				numMatch+=1;
+
 				if (tag.contains("Interés corriente")
 						|| tag.contains("Interés moratorio")
 						|| tag.contains("Reversión de intereses")
@@ -1774,7 +1784,19 @@ public class Pdf {
 
 					return moduleContent;
 				} else {
-					return moduleContent;
+					int duplicate;
+					if (lastLine!=""){
+						duplicate= duplicate(lastLine);
+						if (duplicate==0){
+							duplicate=1;
+						}
+					}else{
+						duplicate=1;
+					}
+					if (numMatch==duplicate){
+						return moduleContent;
+					}
+
 				}
 
 			}
@@ -1818,6 +1840,10 @@ public class Pdf {
 		archive.delete();
 	}
 	public String readerLastline(String page) {
+		if (page.contains("cuenta.html.php"))
+		{
+			System.out.println("Error encontrado en el HTML: "+getName());
+		}
 		String[] lines = page.split("\\n");
 		return lines[lines.length - 1];
 
