@@ -81,84 +81,8 @@
             <artifactId>layout</artifactId>
             <version>9.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- Java Mailer -->
-
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.7</version>
-        </dependency>
-
-        <!-- Mailer -->
-        <dependency>
-            <groupId>ve.com.pt</groupId>
-            <artifactId>mailer</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-
-        <!-- JSONDoc -->
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>spring-boot-starter-jsondoc</artifactId>
-            <version>1.2.22</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>jsondoc-core</artifactId>
-            <version>1.2.22</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>jsondoc-springmvc</artifactId>
-            <version>1.2.22</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>jsondoc-ui-webjar</artifactId>
-            <version>1.2.22</version>
-        </dependency>
-
-        <!-- JWT -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.4</version>
-        </dependency>
 
         <dependency>
             <groupId>com.github.mifmif</groupId>

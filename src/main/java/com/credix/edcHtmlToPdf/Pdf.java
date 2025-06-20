@@ -249,7 +249,7 @@ public class Pdf {
 				return "dólares";
 			}
 			if (pageText[i].contains("colones principal")){
-				return "principal";
+				return "colones";
 			}
 		}
 		return null;
@@ -1120,6 +1120,9 @@ public class Pdf {
 							String moneda = headerMatchOnpage(pageText.split("\\n"));
 							if ((moneda) != null) {
 								String title = sectionMatchTag(pageText.split("\\n"));
+								if (title==null){
+									title= searchSectionMatchTag(pageText.split("\\n"));
+								}
 								if (title != null) {
 									title = getTagContentMatch(extratorMatcher("div"), "<strong>" + title);
 									if (title != null) {
@@ -1481,6 +1484,32 @@ public class Pdf {
 
 		return false;
 	}
+  private String [] getPreviousPage(int indx) throws IOException {
+	  String[] page;
+
+	  setI(getI() - indx);
+	  String fileName = fileExists(getDirectory() + "/" + getName()) ?
+			  getDirectory() + "/" + getName() :
+			  getDirectory() + "/Update-" + getName();
+	   page =  readerPage(fileName).split("\\n");
+	   setI(getI()+indx);
+	   return page;
+  }
+	private String searchSectionMatchTag(String [] pageText) throws IOException {
+		int count =0;
+		String title = null;
+		while (getI()> 1){
+			title= sectionMatchTag(pageText);
+			if (title!=null){
+				return title;
+			}
+			count+=1;
+			pageText=getPreviousPage(count);
+
+		}
+		return null;
+	}
+
 	private boolean caseStrong(String lastLine, String tagContent, String module) {
 		int index = 0;
 		if (tagContent.contains(lastLine.trim())) {
