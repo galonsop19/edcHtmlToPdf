@@ -526,9 +526,7 @@ public class Pdf {
 				return searchHeader(tagContent, lastLine);
 			}
 
-			if (words.length>=10 && count>=8){
-				return searchHeader(tagContent, lastLine);
-			}
+
 		}
 
 		if (words.length<=4){
@@ -1742,6 +1740,9 @@ public class Pdf {
 		}
 		return count;
 	}
+	private String normalize(String input) {
+		return input.trim().replaceAll("\\s+", " ");
+	}
 	private int getNumberOfPages(String filePath) throws IOException {
 		try (PdfDocument pdfDocument = openPdfDocument(filePath)) {
 			return pdfDocument.getNumberOfPages();
@@ -1851,11 +1852,12 @@ public class Pdf {
 		return tagPattern.matcher(getHtml());
 	}
 	public String extratorMatcherWithFilter(String module, String tagContent, String tag){
+		String content="";
 		Pattern pattern = Pattern.compile("(<" + tag + "[^>]*>[\\s\\S]*?</" + tag + ">)");
 		Matcher matcher = pattern.matcher(module);
 		while (matcher.find()){
-			String content=matcher.group(1);
-			if (content.contains(tagContent)){
+			 content=matcher.group(1);
+			if (normalize(content).contains(normalize(tagContent))) {
 				return content;
 			}
 		}
