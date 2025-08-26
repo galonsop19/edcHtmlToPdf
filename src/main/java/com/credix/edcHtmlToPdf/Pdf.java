@@ -2,7 +2,10 @@
 
 package com.credix.edcHtmlToPdf;
 
+
+import com.fasterxml.jackson.databind.util.LinkedNode;
 import com.itextpdf.html2pdf.ConverterProperties;
+import com.credix.edcHtmlToPdf.constants.EdcConstants.*;
 import com.itextpdf.html2pdf.HtmlConverter;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.PageSize;
@@ -20,6 +23,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.credix.edcHtmlToPdf.constants.EdcConstants.*;
 
 public class Pdf {
 
@@ -67,6 +72,20 @@ public class Pdf {
 	}
 	public void setHtml(String html) {
 		this.html = html;
+	}
+	private static boolean containsAny(String text, Set<String> needles) {
+		if (text == null || needles == null) return false;
+		for (String n : needles) {
+			if (text.contains(n)) return true;
+		}
+		return false;
+	}
+	private String cleanline(String linea) {
+		return linea
+				.replace("¢", " ")
+				.replace("$", " ")
+				.replaceAll("\\s+", " ")
+				.trim();
 	}
 
 	public void createPdfFromHtml(String sourceFile, String destDirectory, String name) throws IOException {
@@ -224,15 +243,19 @@ public class Pdf {
 
 	}
 	public Boolean isProduct(String line){
-		return line.equals("Cuotas cero interés*")
-				|| line.trim().equals("Ampliar plazo cero interés") ||
-				line.trim().equals("Ampliar plazo cuoticas") ||
-				line.trim().equals("Cuoticas") ||
-				line.trim().equals("Crédito personal") ||
-				line.trim().equals("Crédito moto") ||
-				line.trim().equals("Plan liquidez - Refinanciamiento") ||
-				line.trim().equals("Plan apoyo - Refinanciamiento") ||
-				line.trim().equals("Plan solidario - Refinanciamiento");
+		return isProductLabel(line);
+	}
+	private static boolean isProductLabel(String line) {
+		return line != null && PRODUCTS.contains(line.trim());
+	}
+	private static boolean isSummarySectionLabel(String line) {
+		return line != null && SUMMARY_SECTIONS.contains(line.trim());
+	}
+	private static boolean isTopLevelSectionLabel(String line) {
+		return line != null && TOP_LEVEL_SECTIONS.contains(line.trim());
+	}
+	private static boolean isInteresSectionKeywords(String line) {
+		return line != null && INTEREST_KEYWORDS.contains(line.trim());
 	}
 	public boolean sectionMatchOnpage(String [] pageText){
 		for (int i = pageText.length - 1; i >= 0; i--) {
@@ -288,10 +311,9 @@ public class Pdf {
 	private boolean isEquals(String tagContent, String lastLine) {
 		int count = 0;
 		String lineAux="";
-		lastLine = lastLine.replace("¢", " ");
-		lastLine = lastLine.replace("$", " ");
+		lastLine= cleanline(lastLine);
 		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
-		lastLine = lastLine.replaceAll("\\s+", " ").trim();
+
 
 		String[] words = lastLine.split(" ");
 		for (int i = 0; i < words.length; i++) {
@@ -387,10 +409,7 @@ public class Pdf {
 	private boolean searchContentTable(String tagContent, String lastLine, boolean desglose, int spacious, int duplicate) throws IOException {
 		int count = 0;
 		String lineAux="";
-		lastLine = lastLine.replace("¢", " ");
-		lastLine = lastLine.replace("$", " ");
-//		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
-		lastLine = lastLine.replaceAll("\\s+", " ").trim();
+		lastLine = cleanline(lastLine);
 		String tagContentOld=tagContent;
 		tagContent = tagContent.replaceAll("&nbsp;", " ").trim();
 		tagContent = tagContent.replaceAll("&cent;", " ").trim();
@@ -513,6 +532,7 @@ public class Pdf {
 
 				if (isLastTr(tagContent,"tr","table")){
 					if (caseDetallePago(tagContent)) {
+						updatePdf();
 						return true;
 					}
 					updatePdf();
@@ -640,10 +660,7 @@ public class Pdf {
 	}
 
 	private int duplicate(String lastLine) {
-		lastLine = lastLine.replace("¢", " ");
-		lastLine = lastLine.replace("$", " ");
-//		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
-		lastLine = lastLine.replaceAll("\\s+", " ").trim();
+		lastLine = cleanline(lastLine);
 
 		String[] words = lastLine.split(" ");
 		for (int i = 0; i < words.length; i++) {
@@ -658,10 +675,9 @@ public class Pdf {
 		int count=0;
 		for ( String line:
 				lines) {
-			line = line.replace("¢", " ");
-			line = line.replace("$", " ");
+			line = cleanline(line);
 			line = line.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
-			line = line.replaceAll("\\s+", " ").trim();
+
 
 			words = line.split(" ");
 			for (int i = 0; i < words.length; i++) {
@@ -710,11 +726,7 @@ public class Pdf {
 			String content= matcher.group(1);
 
 			if (content.contains("<th")){
-				if (tagContent.contains("Interés corriente")
-						|| tagContent.contains("Interés moratorio")
-						|| tagContent.contains("Reversión de intereses")
-						|| tagContent.contains("Interés de otras líneas de financiamiento")
-				){
+				if (containsAny(tagContent, INTEREST_KEYWORDS)) {
 					modifyHtml(getTagIndexEnd(tagContent,"tr", lastLine),content);
 					return true;
 
@@ -759,7 +771,7 @@ public class Pdf {
 	public int getTagContentIndexWithSection(String lastLine, String module, String tag){
 		int count=0;
 		boolean band=false;
-		lastLine = lastLine.replace("¢", " ");
+		lastLine = cleanline(lastLine);
 		String lineAux="";
 		String[] words = lastLine.split("[\\s\\p{Z}]+");
 		for (String word : words) {
@@ -918,10 +930,9 @@ public class Pdf {
 					liness = readerPage(fileName).split("\\n");
 					setI(getI() - 1);
 					lastLine=liness[0];
-					lastLine = lastLine.replace("¢", " ");
-					lastLine = lastLine.replace("$", " ");
+					lastLine = cleanline(lastLine);
 					lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
-					lastLine = lastLine.replaceAll("\\s+", " ").trim();
+
 
 					String[] words = lastLine.split(" ");
 					for (int i = 0; i < words.length; i++) {
@@ -1518,59 +1529,28 @@ public class Pdf {
 		int index = 0;
 		if (tagContent.contains(lastLine.trim())) {
 
-			if (lastLine.equals("Movimientos de la tarjeta de crédito") ||
-					lastLine.trim().equals("Detalle de pagos del periodo") ||
-					lastLine.trim().equals("Detalle de transacciones")||
-					lastLine.trim().equals("Detalle de intereses")||
-					lastLine.trim().equals("Detalle de otros cargos")||
-					lastLine.trim().equals("Detalle de servicios de elección voluntaria")||
-					lastLine.trim().equals("Cargos por gestión de cobro")||
-					lastLine.trim().equals("Resumen de movimientos"))
-			{
-
-
-				index = getTagIndexStart(tagContent, "div", lastLine);
-				modifyHtml(index,"<br><br><br>");
+			if (isSummarySectionLabel(lastLine)) {
+				index = getTagIndexStart(tagContent, TAG_DIV, lastLine);
+				modifyHtml(index, "<br><br><br>");
 				return true;
 			}
-			if (lastLine.equals("Otras líneas de financiamiento") ||
-					lastLine.trim().equals("Resumen de tarjeta de crédito") ||
-					lastLine.trim().equals("Detalle de pago"))
-
-			{
-
-				index = getTagIndexStart(extratorModule(tagContent, module,""), module, lastLine);
-				modifyHtml(index,"<br><br><br>");
+			if (isTopLevelSectionLabel(lastLine)) {
+				index = getTagIndexStart(extratorModule(tagContent, module, ""), module, lastLine);
+				modifyHtml(index, "<br><br><br>");
 				return true;
 			}
-			if (lastLine.trim().equals("Aspectos destacados") ||
-					lastLine.trim().equals("Abreviaciones")){
-				index = getTagIndexStart(extratorModule(tagContent, module,""), module, lastLine);
-				modifyHtml(index,"<br><br><br>");
-				return true;
-
-			}
-			if (lastLine.trim().equals("Cuotas cero interés*") || lastLine.trim().equals("Ampliar plazo cero interés")||
-					lastLine.trim().equals("Cuoticas")||
-					lastLine.trim().equals("Ampliar plazo cuoticas") ||
-					lastLine.trim().equals("Crédito personal")||
-					lastLine.trim().equals("Crédito moto")||
-					lastLine.trim().equals("Plan liquidez - Refinanciamiento")||
-					lastLine.trim().equals("Plan apoyo - Refinanciamiento")||
-					lastLine.trim().equals("Plan solidario - Refinanciamiento")
-
-			){
+			if (isProduct(lastLine)) {
 				String[] liness = pageText.split("\\n");
-				String line	= liness[liness.length - 2];
-				String newContent="<br><br>";
+				String line = liness[liness.length - 2];
+				String newContent = "<br><br>";
 
-				if (line.trim().equals("Otras líneas de financiamiento")){
-					tagContent="<strong>"+line.trim();
-					newContent+="<br><br><br>";
+				if (line.trim().equals("Otras líneas de financiamiento")) {
+					tagContent = "<strong>" + line.trim();
+					newContent += "<br><br><br>";
 				}
 
-				index = getTagIndexStart(extratorModule(tagContent, module,lastLine), module, lastLine);
-				modifyHtml(index,newContent);
+				index = getTagIndexStart(extratorModule(tagContent, module, lastLine), module, lastLine);
+				modifyHtml(index, newContent);
 				return true;
 
 			}
@@ -1808,11 +1788,8 @@ public class Pdf {
 			if (moduleContent.toLowerCase().trim().contains(tag.trim().toLowerCase())) {
 				numMatch+=1;
 
-				if (tag.contains("Interés corriente")
-						|| tag.contains("Interés moratorio")
-						|| tag.contains("Reversión de intereses")
-						|| tag.contains("Interés de otras líneas de financiamiento")
-						|| tag.contains("Interés de periodos anteriores")) {
+
+				if (containsAny(tag, INTEREST_KEYWORDS)) {
 
 					if (moduleContent.contains("<strong>Detalle de pago</strong>") && getI() != 1) {
 						continue;
