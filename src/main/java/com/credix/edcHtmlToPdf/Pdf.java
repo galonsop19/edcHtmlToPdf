@@ -389,8 +389,12 @@ public class Pdf {
 		String lineAux="";
 		lastLine = lastLine.replace("¢", " ");
 		lastLine = lastLine.replace("$", " ");
-		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
+//		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
 		lastLine = lastLine.replaceAll("\\s+", " ").trim();
+		String tagContentOld=tagContent;
+		tagContent = tagContent.replaceAll("&nbsp;", " ").trim();
+		tagContent = tagContent.replaceAll("&cent;", " ").trim();
+
 
 		String[] words = lastLine.split(" ");
 		for (int i = 0; i < words.length; i++) {
@@ -412,9 +416,7 @@ public class Pdf {
 				count++;
 				lineAux += words[j] + " ";
 				if (count==(words.length)&& lastLine.toLowerCase().trim().equals(lineAux.toLowerCase().trim())){
-					if (duplicate!=1){
-						return false;
-					}
+					tagContent=tagContentOld;
 					break;
 
 				}
@@ -425,8 +427,12 @@ public class Pdf {
 
 				}
 				if (words.length>5) {
-					if ((count >= (words.length / 2) && lastLine.contains(lineAux))) {
-						break;
+					if ((count >= (words.length/2) && lastLine.contains(lineAux)) ) {
+						if (caseDetallePago(tagContent) && getI()== 0) {
+							updatePdf();
+							return true;
+						}
+
 					}
 
 				}
@@ -636,7 +642,7 @@ public class Pdf {
 	private int duplicate(String lastLine) {
 		lastLine = lastLine.replace("¢", " ");
 		lastLine = lastLine.replace("$", " ");
-		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
+//		lastLine = lastLine.replaceAll("\\b\\d{1,2}/\\d{1,2}(?!/\\d{2,4})\\b", "");
 		lastLine = lastLine.replaceAll("\\s+", " ").trim();
 
 		String[] words = lastLine.split(" ");
