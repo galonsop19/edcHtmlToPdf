@@ -103,6 +103,7 @@ public class Pdf {
 		int i = 1;
 		String pageText = "";
 		int numberOfPages = getNumberOfPages(destDirectory + "/-" + name);
+		if (numberOfPages==1){updatePdf();return;}
 		while (i <= numberOfPages) {
 
 			if (fileExists(destDirectory + "/Update-" + name)) {
